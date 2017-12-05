@@ -22,3 +22,9 @@ Now that the ROS master is running, we can run our  ROS nodes. To do so, we will
 To get a list of all nodes that are active and have been registered with the ROS Master, we can use the command `rosnode list`. 
 #### Listing All Topics
 In a similar fashion, we are able to query the ROS Master for a list of all topics. To do so, we use the command `rostopic` list.
+#### Get Information About a Specific Topic
+If we wish to get information about a specific topic, who is publishing to it, subscribed to it, or the type of message associated with it, we can use the command `rostopic info`.
+#### Turtlesim Comms: Show Message Information
+we will use the rosmsg info command.
+#### Turtlesim Comms: Echo Messages on a Topic
+Sometimes it may be useful to look at a topic’s published messages in real time. To do so, we can use the command `rostopic echo`. 
