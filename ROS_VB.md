@@ -22,10 +22,12 @@ The Master process is responsible for the following (and more)
 To run the master process, you must execute the command `roscore`
 
 
-#### Running Turtlesim Nodes
+#### Running Nodes
 
 Now that the ROS master is running, we can run our  ROS nodes. To do so, we will execute the `rosrun` command in a new terminal window, passing as parameters the name of the package we wish to run, and the name of the actual node.
 
 #### Listing all Active Nodes
 
 To get a list of all nodes that are active and have been registered with the ROS Master, we can use the command `rosnode list`. 
+#### Listing All Topics
+In a similar fashion, we are able to query the ROS Master for a list of all topics. To do so, we use the command `rostopic` list.
