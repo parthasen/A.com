@@ -4,25 +4,20 @@
 
 #### Steps
 
-    Clone the project repository
+1. Clone the project repository `git clone https://github.com/udacity/carnd_capstone.git`
+2. Need to install python dependencies 
 
-git clone https://github.com/udacity/carnd_capstone.git
+        cd carnd_capstone
+        pip install -r requirements.txt
+3. Make and run styx
 
-    Install python dependencies
+        cd ros
+        catkin_make
+        source devel/setup.sh
+        roslaunch launch/styx.launch
+4. Run the simulator
 
-cd carnd_capstone
-pip install -r requirements.txt
-
-    Make and run styx
-
-cd ros
-catkin_make
-source devel/setup.sh
-roslaunch launch/styx.launch
-
-    Run the simulator
-
-unzip lights_no_cars.zip
-cd lights_no_cars
-chmod +x ros_test.x86_64
-./ros_test.x86_64
+        unzip lights_no_cars.zip
+        cd lights_no_cars
+        chmod +x ros_test.x86_64
+        ./ros_test.x86_64
