@@ -30,3 +30,61 @@ we will use the rosmsg info command.
 Sometimes it may be useful to look at a topic’s published messages in real time. To do so, we can use the command `rostopic echo`. 
 
 https://github.com/parthasen/autonomousCAR/blob/ROS/README.md
+
+1. Need to create and initialize the workspace once. First, need to create the top level catkin workspace directory and a sub-directory named src (pronounced source). The top level directory’s name is arbitrary, but is often called catkin_ws (an abbreviation of catkin_workspace), so we will follow this convention. You can create these two directories with a single command:`$ mkdir -p ~/catkin_ws/src`
+2. navigate to the src directory with the cd command:`$ cd ~/catkin_ws/src`
+3. initialize the catkin workspace:`$ catkin_init_workspace`
+4. Return to the top level directory,`$ cd ~/catkin_ws`
+5.  build the workspace.`$ catkin_make`
+***Note: you must issue this command from within the top level directory (i.e., within catkin_ws NOT catkin_ws/src)***
+6. `$ ls` The aptly named build directory is the build space for C++ packages and, for the most part, you will not interact with it. The devel directory does contain something of interest, a file named setup.bash. This setup.bash script must be sourced before using the catkin workspace. 
+7. `catkin_ws/src$ls` CMakeLists.txt is inside src
+8. clone an existing package and add it to our newly created workspace.start by navigating to the src directory and cloning the  package for this lesson from its github repo.
+
+        $ cd ~/catkin_ws/src
+        $ git clone https://github.com/udacity/simple_arm_01.git simple_arm
+ 9. repo has finished cloning, you can change directory to the top-level of the ros workspace and build the new package.
+ 
+        $ cd ~/catkin_ws
+        $ catkin_make
+ 10. workspace has been built, you can source it’s setup script:`$ source devel/setup.bash`
+
+ 11. `roslaunch` allows to do the following: a. Launch ROS Master and multiple nodes with one simple command. b. Set default parameters on the parameter server c. Automatically re-spawn processes that have died 
+ 
+         $ roslaunch simple_arm robot_spawn.launch
+        
+ 11. The `rosdep` tool will check for a package's missing dependencies, download them, and install them.To check for missing dependencies in the simple_arm package:`$ rosdep check simple_arm`. To have rosdep install packages, invoke the following command from the root of the catkin workspace   `$ rosdep install -i simple_arm`. Issues with this command may arise when using a VM. If this is the case, please try:`sudo apt-get install ros-kinetic-gazebo-ros-control`
+ 12. ***Own package:*** syntax for creating a catkin package is simply,`$ catkin_create_pkg <your_package_name> [dependency1 dependency2 …]`. Like `$ catkin_create_pkg first_package`.
+ 13. **making node***.`catkin_ws` is workspace.`simple_arm` is package. And now making node. The first node `simple_mover`. simple_mover does nothing more than publish joint angle commands to `simple_arm`.Second node `arm_mover`. `arm_mover` provides a service called safe_move, which allows the arm to be moved to any position within its workspace which has been deemed to be “safe”. The safe zone is bounded by minimum and maximum joint angles, and is configurable via the ROS’ parameter server. The last node is the `look_away node`. This node subscribes to a topic where camera data is being published. When the camera detects an image with uniform color, meaning it’s looking at the sky, the node will call the safe_move service to move the arm to a new position.
+In order to create a new node in python, you must first create the scripts directory within the simple_arm package, as it does not yet exist.
+
+    $ cd ~/catkin_ws/src/simple_arm/
+    $ mkdir scripts
+    $ cd scripts
+    $ echo '#!/bin/bash' >> hello
+    $ echo 'echo Hello World' >> hello 
+    $ chmod u+x hello
+    $ cd ~/catkin_ws
+    $ catkin_make
+    $ source devel/setup.bash
+    $ rosrun simple_arm hello
+
+or
+
+    $ cd ~/catkin_ws/src/simple_arm/scripts/
+    $ touch simple_mover
+    $ chmod u+x simple_mover
+    $ nano simple_mover
+Add or write `simple_mover.py` 
+
+14. 
+
+
+
+
+       
+
+
+
+
+
