@@ -33,7 +33,7 @@ https://github.com/parthasen/autoeuvre/blob/note/ROS_VB.md
         cd lights_no_cars
         chmod +x ros_test.x86_64
         ./ros_test.x86_64
-#### ROS
+#### Nodes
 ##### Waypoint Node
         T1: roscore
         T2: cd CarND-Capstone/ros
@@ -43,8 +43,14 @@ https://github.com/parthasen/autoeuvre/blob/note/ROS_VB.md
 
 ##### DBW Node
 
+        T4: student@udacity:~/CarND-Capstone/ros/src/twist_controller$
+
 ##### TLD Node
 
+#### ROS
+        T5: rosbag play -l <path_to_your.bag>
+        T6: @udacity:~$ rviz
+File > Open Config in RViz from Desktop...       
 
 
 
