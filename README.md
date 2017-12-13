@@ -2,6 +2,10 @@
 
 ![ros-graph](https://github.com/parthasen/autoeuvre/blob/master/imgs/final-project-ros-graph-v2.png)
 
+https://github.com/parthasen/autoeuvre/edit/master/README.md
+
+https://github.com/parthasen/autoeuvre/blob/note/ROS_VB.md
+
 #### Important Intel
 1. Robot Operating System (ROS) that will first steer a virtual car in the simulator, and later on the code will be run on an actual car 'Carla'. 
 2. ROS installed in Ubuntu, VM or Docker file
