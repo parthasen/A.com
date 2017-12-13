@@ -19,7 +19,7 @@ https://github.com/parthasen/autoeuvre/blob/note/ROS_VB.md
 1. Clone the project repository `git clone https://github.com/udacity/carnd_capstone.git`
 2. Need to install python dependencies 
 
-        cd carnd_capstone
+        cd CarND-Capstone
         pip install -r requirements.txt
 3. Make and run styx
 
@@ -33,3 +33,21 @@ https://github.com/parthasen/autoeuvre/blob/note/ROS_VB.md
         cd lights_no_cars
         chmod +x ros_test.x86_64
         ./ros_test.x86_64
+#### ROS
+##### Waypoint Node
+        T1: roscore
+        T2: cd CarND-Capstone/ros
+            student@udacity:~/CarND-Capstone/ros$ roslaunch launch/styx.launch
+        T3: rostopic list,rostopic info /final_waypoints,
+        ** use source devel/setup.bash
+
+##### DBW Node
+
+##### TLD Node
+
+
+
+
+
+
+
