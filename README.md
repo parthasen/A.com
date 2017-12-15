@@ -16,7 +16,7 @@ https://github.com/parthasen/autoeuvre/blob/note/ROS_VB.md
 
 #### Steps
 
-1. Clone the project repository `git clone https://github.com/udacity/carnd_capstone.git`
+1. Clone the project repository `git clone https://github.com/udacity/CarND-Capstone`
 2. Need to install python dependencies 
 
         cd CarND-Capstone
